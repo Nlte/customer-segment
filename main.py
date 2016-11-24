@@ -46,10 +46,12 @@ score = regressor.score(X_test, y_test)
 print "R^2 score predicting Detergents_Paper : %f" % score
 
 # Produce a scatter matrix for each pair of features in the data
-# pd.scatter_matrix(data, alpha = 0.3, figsize = (14,8), diagonal = 'kde')
+pd.scatter_matrix(data, alpha = 0.3, figsize = (14,8), diagonal = 'kde')
 
 #  Scale the data using the natural logarithm
 log_data = np.log(data)
+print(log_data)
+ SystemExit
 
 #  Scale the sample data using the natural logarithm
 log_samples = np.log(samples)
@@ -90,7 +92,7 @@ good_data = log_data.drop(log_data.index[outliers]).reset_index(drop = True)
 
 #if not log_samples.isin(good_data):
 #    print log_samples.isin(good_data)
-#    raise SystemExit(0)
+#    (0)
 
 
 ############################ PCA #####################################################
@@ -102,7 +104,6 @@ pca = pca.fit(good_data)
 
 #  Transform the sample log-data using the PCA fit above
 pca_samples = pca.transform(log_samples)
-
 # Generate PCA results plot
 pca_results = rs.pca_results(good_data, pca)
 
