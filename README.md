@@ -12,6 +12,6 @@ This project was implemented with **Python 2.7** and the following librairies :
 
 ## Usage
 Run the jupyter notebook.
-`
+```sh
 $ jupyter notebook boston_housing.ipynb
-`
+```
