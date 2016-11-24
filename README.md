@@ -1,2 +1,2 @@
 # customer-segment
-create customer segments
+create customer segments with unsupervised learning.
